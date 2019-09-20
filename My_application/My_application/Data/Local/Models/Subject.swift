@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-class Subject {
+class Subject: CustomStringConvertible {
     
     var name: String?
     var teachers: [Teacher] = [] //los arrays siempre devolverlos como vacios y nunca como nil u opcionales
@@ -19,8 +18,13 @@ class Subject {
     var numTeachers: Int {
         return teachers.count
     }
+    
     var numStudens: Int {
         return students.count
+    }
+    
+    var description: String {
+        return "Subject data: \(String(describing: name))"
     }
     
     //variable autocalculada
@@ -34,4 +38,6 @@ class Subject {
         self.teachers = teachers
         self.students = students
     }
+    
+    
 }
