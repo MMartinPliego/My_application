@@ -55,12 +55,10 @@
 		D94126702333FFA2003CC2DC /* My_application */ = {
 			isa = PBXGroup;
 			children = (
-				D94126712333FFA2003CC2DC /* AppDelegate.swift */,
-				D941267D2333FFA3003CC2DC /* Info.plist */,
-				D94126732333FFA2003CC2DC /* ViewController.swift */,
-				D94126752333FFA2003CC2DC /* Main.storyboard */,
-				D941267A2333FFA3003CC2DC /* LaunchScreen.storyboard */,
-				D94126782333FFA3003CC2DC /* Assets.xcassets */,
+				D9B4C8B523352B1C002E54B2 /* App */,
+				D9B4C8B723352B90002E54B2 /* Resources */,
+				D9B4C8B823352BDA002E54B2 /* UI */,
+				D9B4C8B623352B7C002E54B2 /* Data */,
 			);
 			path = My_application;
 			sourceTree = "<group>";
@@ -70,6 +68,64 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9B4C8B523352B1C002E54B2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D94126712333FFA2003CC2DC /* AppDelegate.swift */,
+				D941267D2333FFA3003CC2DC /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D9B4C8B623352B7C002E54B2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D9B4C8B723352B90002E54B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D94126782333FFA3003CC2DC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D9B4C8B823352BDA002E54B2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D9B4C8B923352C0B002E54B2 /* Views */,
+				D9B4C8BA23352C14002E54B2 /* Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D9B4C8B923352C0B002E54B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9B4C8BB23352C60002E54B2 /* StoryBoard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9B4C8BA23352C14002E54B2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D94126732333FFA2003CC2DC /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D9B4C8BB23352C60002E54B2 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				D94126752333FFA2003CC2DC /* Main.storyboard */,
+				D941267A2333FFA3003CC2DC /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
