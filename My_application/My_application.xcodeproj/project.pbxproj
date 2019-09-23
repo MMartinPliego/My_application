@@ -140,8 +140,8 @@
 		D9B4C8BC233532AD002E54B2 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				D9B4C8BD233532B8002E54B2 /* Models */,
 				D980B4782339153700D1B722 /* DefaultData.swift */,
+				D9B4C8BD233532B8002E54B2 /* Models */,
 			);
 			path = Local;
 			sourceTree = "<group>";
