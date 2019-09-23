@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Subject: CustomStringConvertible {
+class Subject: CustomStringConvertible { //CustomStringConvertible para que sepa pintar la vista
     
     var name: String?
     var teachers: [Teacher] = [] //los arrays siempre devolverlos como vacios y nunca como nil u opcionales
