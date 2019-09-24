@@ -55,12 +55,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Soy el nuevo text file" borderStyle="roundedRect" placeholder="Soy el nuevo text file" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="3pK-qo-zbz">
+                                <rect key="frame" x="20" y="324" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xy9-Un-u2Q" secondAttribute="bottom" constant="50" id="55g-aH-2rs"/>
+                            <constraint firstItem="3pK-qo-zbz" firstAttribute="top" secondItem="dFS-Rw-Sz4" secondAttribute="bottom" constant="40" id="5zi-ag-px9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dFS-Rw-Sz4" secondAttribute="trailing" constant="15" id="9zf-56-QK7"/>
                             <constraint firstItem="dFS-Rw-Sz4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CzW-mo-6BJ"/>
+                            <constraint firstItem="3pK-qo-zbz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Gix-Rb-m9i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3pK-qo-zbz" secondAttribute="trailing" constant="20" id="KhC-bt-Se2"/>
                             <constraint firstItem="xy9-Un-u2Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="dUe-cP-7Wg"/>
                             <constraint firstItem="dFS-Rw-Sz4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="eKO-s3-X36"/>
                             <constraint firstAttribute="bottom" secondItem="dFS-Rw-Sz4" secondAttribute="bottom" constant="612" id="fAD-Fo-OzI"/>
