@@ -17,6 +17,7 @@
 		D9B4C8BF23353537002E54B2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4C8BE23353537002E54B2 /* Student.swift */; };
 		D9B4C8C12335470E002E54B2 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4C8C02335470E002E54B2 /* Teacher.swift */; };
 		D9B4C8C32335473D002E54B2 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4C8C22335473D002E54B2 /* Subject.swift */; };
+		D9B59C98233BD6470025855A /* StudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B59C97233BD6470025855A /* StudentViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D9B4C8BE23353537002E54B2 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		D9B4C8C02335470E002E54B2 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		D9B4C8C22335473D002E54B2 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		D9B59C97233BD6470025855A /* StudentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				D94126732333FFA2003CC2DC /* ViewController.swift */,
 				D97092F2233BB122009D865A /* StudentsViewController.swift */,
+				D9B59C97233BD6470025855A /* StudentViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				D9B4C8C12335470E002E54B2 /* Teacher.swift in Sources */,
 				D9B4C8C32335473D002E54B2 /* Subject.swift in Sources */,
+				D9B59C98233BD6470025855A /* StudentViewCell.swift in Sources */,
 				D94126742333FFA2003CC2DC /* ViewController.swift in Sources */,
 				D980B4792339153700D1B722 /* DefaultData.swift in Sources */,
 				D9B4C8BF23353537002E54B2 /* Student.swift in Sources */,
