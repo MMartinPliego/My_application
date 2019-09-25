@@ -36,10 +36,15 @@ extension StudentsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StudentsViewCell", for: indexPath) as! StudentsViewCell
+        
+        if (indexPath.row < defaultStudents.count) {
+            let student = defaultStudents[indexPath.row]
+            cell.configureCell(student: student)
+        }
+        
+        return cell
     }
     
-    
-    
-    
+
 }
