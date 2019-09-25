@@ -41,6 +41,7 @@ class Teacher: Hashable, CustomStringConvertible {
     // var hashValue: Int {
     //    return ObjectIdentifier(self).hashValue
     //}
+    var avatar: String?
     var name: String?
     var email: String?
     var type: TeacherType?
@@ -50,12 +51,13 @@ class Teacher: Hashable, CustomStringConvertible {
     }
     
     
-    convenience init(name: String, email: String? = nil, type: TeacherType? = nil) {
+    convenience init(name: String, email: String? = nil, type: TeacherType? = nil, avatar: String? = nil) {
         self.init ()
         
         self.name = name
         self.email = email
         self.type = type
+        self.avatar = avatar
     }
     
     

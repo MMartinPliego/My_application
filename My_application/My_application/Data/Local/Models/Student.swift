@@ -10,6 +10,7 @@ import Foundation
 
 class Student: CustomStringConvertible {
     
+    var avatar: String?
     var name: String?
     var email: String?
     var birthdate: Date?
@@ -21,15 +22,15 @@ class Student: CustomStringConvertible {
     }
     
     //Customiza el constructor
-    convenience init(name: String, email: String? = nil, birthdate: Date? = nil) {
+    convenience init(name: String, email: String? = nil, birthdate: Date? = nil, avatar: String? = nil) {
         
         self.init()
         
         self.name = name
         self.email = email
         self.birthdate = birthdate
+        self.avatar = avatar
     }
-    
     
     
 }

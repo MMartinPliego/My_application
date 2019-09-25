@@ -27,6 +27,7 @@ class StudentsViewCell: UITableViewCell {
     // Función que llena los datos de la celda con los datos de las variables que tenemos en DefaultData.swift
     func configureCell(student: Student) {
         // TODO: Add student image
+        imageViewStudent.image = UIImage(named: student.avatar ?? "")
         labelViewStudenttittle.text = student.name
         labelViewStudentdescription.text = student.email
     }

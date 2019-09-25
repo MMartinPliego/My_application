@@ -10,6 +10,7 @@ import Foundation
 
 class Subject: CustomStringConvertible { //CustomStringConvertible para que sepa pintar la vista
     
+    var avatar: String?
     var name: String?
     var teachers: [Teacher] = [] //los arrays siempre devolverlos como vacios y nunca como nil u opcionales
     var students: [Student] = []
@@ -31,12 +32,13 @@ class Subject: CustomStringConvertible { //CustomStringConvertible para que sepa
     //    var numStudens: Int {
     // return students?.count ?? 0
     
-    convenience init(name: String, teachers: [Teacher] = [], students: [Student] = []) {
+    convenience init(name: String, teachers: [Teacher] = [], students: [Student] = [],avatar: String? = nil) {
         self.init ()
         
         self.name = name
         self.teachers = teachers
         self.students = students
+        self.avatar = avatar
     }
     
     
