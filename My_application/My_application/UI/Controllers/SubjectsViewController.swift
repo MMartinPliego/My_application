@@ -21,6 +21,15 @@ class SubjectsViewController: UIViewController {
         
         configureCollectionView()
         
+        // Para poner dos columnas
+        if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout{
+                layout.minimumLineSpacing = 10
+                layout.minimumInteritemSpacing = 10
+                layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+                let size = CGSize(width:(collectionView!.bounds.width-30)/2, height: 250)
+                layout.itemSize = size
+        }
+        
     }
     
 }
