@@ -1,14 +1,14 @@
 //
-//  StudentsViewController.swift
+//  TeachersViewController.swift
 //  My_application
 //
-//  Created by Dev2 on 25/09/2019.
+//  Created by Dev2 on 26/09/2019.
 //  Copyright © 2019 Orum Games. All rights reserved.
 //
 
 import UIKit
 
-class StudentsViewController: UIViewController {
+class TeachersViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
@@ -22,9 +22,10 @@ class StudentsViewController: UIViewController {
         configureTableView()
     }
     
+    
 }
 
-extension StudentsViewController: UITableViewDataSource, UITableViewDelegate {
+extension TeachersViewController: UITableViewDataSource, UITableViewDelegate {
     
     /// Configure tableView with default options
     func configureTableView() {
@@ -33,15 +34,20 @@ extension StudentsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return defaultStudents.count
+        return defaultTeachers.count
+    }
+    
+    // Para poner un tamaño de celda especifico
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 310.0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StudentsViewCell", for: indexPath) as! StudentsViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TeachersViewCell", for: indexPath) as! TeachersViewCell
         
-        if (indexPath.row < defaultStudents.count) {
-            let student = defaultStudents[indexPath.row]
-            cell.configureCell(student: student)
+        if (indexPath.row < defaultTeachers.count) {
+            let teacher = defaultTeachers[indexPath.row]
+            cell.configureCell(teacher: teacher)
         }
         
         return cell
