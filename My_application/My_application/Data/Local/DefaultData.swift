@@ -86,8 +86,8 @@ let defaultSubjects = [Subject(name: "Android",
                                teachers: defaultTeachers.filter{$0.name?.contains("o") ?? false},
                                students: defaultStudents.filter{$0.name?.contains("e") ?? false},
                                avatar: "img_subject_javascript"),
-                       Subject(name: "Phyton",
+                       Subject(name: "Python",
                                teachers: defaultTeachers.filter{$0.name?.contains("u") ?? false},
                                students: defaultStudents.filter{$0.name?.contains("a") ?? false},
-                               avatar: "img_subject_phyton")]
+                               avatar: "img_subject_python")]
 

@@ -39,7 +39,7 @@ extension SubjectsViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collection = collectionView.dequeueReusableCell(withReuseIdentifier: "SubjectsViewCell", for: indexPath) as! SubjectViewCell
+        let collection = collectionView.dequeueReusableCell(withReuseIdentifier: "SubjectViewCell", for: indexPath) as! SubjectViewCell
         
         if (indexPath.row < defaultSubjects.count) {
             let subject = defaultSubjects [indexPath.row]
