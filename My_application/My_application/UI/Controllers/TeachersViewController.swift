@@ -39,7 +39,7 @@ extension TeachersViewController: UITableViewDataSource, UITableViewDelegate {
     
     // Para poner un tamaño de celda especifico
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 310.0
+        return 347.0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

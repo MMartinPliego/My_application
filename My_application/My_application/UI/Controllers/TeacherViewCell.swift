@@ -24,6 +24,12 @@ class TeachersViewCell: UITableViewCell {
         labelViewTeacherdescription.text = nil
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        teacherView.dropShadow()
+    }
+    
     // Función que llena los datos de la celda con los datos de las variables que tenemos en DefaultData.swift
     func configureCell(teacher: Teacher) {
         // TODO: Add student image
@@ -33,5 +39,17 @@ class TeachersViewCell: UITableViewCell {
     }
     
     
+}
+
+extension UIView {
+    func dropShadow(scale: Bool = true) {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.6
+        layer.shadowOffset = .zero
+        layer.shadowRadius = 10
+        layer.shouldRasterize = true
+        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
 }
 
