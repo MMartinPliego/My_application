@@ -24,11 +24,13 @@ class StudentsViewCell: UITableViewCell {
         labelViewStudentdescription.text = nil
     }
     
-    
-        override func awakeFromNib() {
-        super.awakeFromNib()
+    // Se llama cuando la vista se carga en memoria
+    override func awakeFromNib() {
+    super.awakeFromNib()
         
-        studentView.dropShadowStudent()
+    //modificar vista de la view (darles propiedas como borde redondeado, color de sombra, opacidad, etc.)
+        studentView.layer.cornerRadius = 10.0
+        studentView.configureShadows()
     }
 
     // Función que llena los datos de la celda con los datos de las variables que tenemos en DefaultData.swift
@@ -40,16 +42,3 @@ class StudentsViewCell: UITableViewCell {
     }
     
 }
-
-extension UIView {
-    func dropShadowStudent(scale: Bool = true) {
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.darkGray.cgColor
-        layer.shadowOpacity = 0.4
-        layer.shadowOffset = .zero
-        layer.shadowRadius = 8
-        layer.shouldRasterize = true
-        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
-    }
-}
-

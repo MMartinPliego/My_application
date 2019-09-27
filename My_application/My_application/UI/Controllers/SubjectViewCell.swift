@@ -25,11 +25,9 @@ class SubjectViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-    subjectView.dropShadowSubject()
-        
+        subjectView.layer.cornerRadius = 15.0
+        subjectView.configureShadows(color: UIColor.brown)
     }
-    
-
     
     // Función que llena los datos de la celda con los datos de las variables que tenemos en DefaultData.swift
     func configureCell(subject: Subject) {
@@ -41,14 +39,3 @@ class SubjectViewCell: UICollectionViewCell {
     
 }
 
-extension UIView {
-    func dropShadowSubject(scale: Bool = true) {
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.6
-        layer.shadowOffset = .zero
-        layer.shadowRadius = 10
-        layer.shouldRasterize = true
-        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
-    }
-}

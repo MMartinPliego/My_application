@@ -20,14 +20,11 @@ class SubjectsViewController: UIViewController {
         super.viewDidLoad()
         
         configureCollectionView()
-        
-
-        
     }
     
 }
 
-extension SubjectsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension SubjectsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func configureCollectionView() {
         collectionView.dataSource = self
@@ -49,6 +46,21 @@ extension SubjectsViewController: UICollectionViewDelegate, UICollectionViewData
         return collection
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 16.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 16.0
+    }
+    
+    // Para poner dos columnas en la pantalla de la app
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let size = (collectionView.frame.size.width - 16.0) / 2
+        return CGSize(width: size,
+                      height: size)
+    }
 
 }
 

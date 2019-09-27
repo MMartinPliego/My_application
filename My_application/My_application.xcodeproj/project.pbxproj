@@ -17,6 +17,7 @@
 		D95245C4233D068C00714AAD /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95245C3233D068C00714AAD /* TeachersViewController.swift */; };
 		D95245C6233D07AE00714AAD /* TeacherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95245C5233D07AE00714AAD /* TeacherViewCell.swift */; };
 		D97092F3233BB122009D865A /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97092F2233BB122009D865A /* StudentsViewController.swift */; };
+		D9783675233E5D530012CAA9 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9783674233E5D530012CAA9 /* UIView+Utils.swift */; };
 		D980B4792339153700D1B722 /* DefaultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D980B4782339153700D1B722 /* DefaultData.swift */; };
 		D9B4C8BF23353537002E54B2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4C8BE23353537002E54B2 /* Student.swift */; };
 		D9B4C8C12335470E002E54B2 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B4C8C02335470E002E54B2 /* Teacher.swift */; };
@@ -37,6 +38,7 @@
 		D95245C3233D068C00714AAD /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
 		D95245C5233D07AE00714AAD /* TeacherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewCell.swift; sourceTree = "<group>"; };
 		D97092F2233BB122009D865A /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
+		D9783674233E5D530012CAA9 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 		D980B4782339153700D1B722 /* DefaultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultData.swift; sourceTree = "<group>"; };
 		D9B4C8BE23353537002E54B2 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		D9B4C8C02335470E002E54B2 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 			path = My_application;
 			sourceTree = "<group>";
 		};
+		D9783673233E5D300012CAA9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D9783674233E5D530012CAA9 /* UIView+Utils.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D9B4C8B22335168E002E54B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 		D9B4C8B523352B1C002E54B2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D9783673233E5D300012CAA9 /* Extension */,
 				D94126712333FFA2003CC2DC /* AppDelegate.swift */,
 				D941267D2333FFA3003CC2DC /* Info.plist */,
 			);
@@ -254,6 +265,7 @@
 				D95245C6233D07AE00714AAD /* TeacherViewCell.swift in Sources */,
 				D9B4C8C32335473D002E54B2 /* Subject.swift in Sources */,
 				D9B59C98233BD6470025855A /* StudentViewCell.swift in Sources */,
+				D9783675233E5D530012CAA9 /* UIView+Utils.swift in Sources */,
 				D94126742333FFA2003CC2DC /* ViewController.swift in Sources */,
 				D9206852233D2A4600537CDF /* SubjectsViewController.swift in Sources */,
 				D9206850233D2A2900537CDF /* SubjectViewCell.swift in Sources */,

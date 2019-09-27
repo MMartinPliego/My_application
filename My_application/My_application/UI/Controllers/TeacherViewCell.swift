@@ -27,7 +27,12 @@ class TeachersViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        teacherView.dropShadow()
+        teacherView.layer.cornerRadius = 12.0
+        teacherView.configureShadows()
+        
+        // Para poner a solo radio a la parte de abajo de una view
+        //      teacherView.layer.maskedCorners =
+        //      [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
     
     // Función que llena los datos de la celda con los datos de las variables que tenemos en DefaultData.swift
@@ -41,15 +46,5 @@ class TeachersViewCell: UITableViewCell {
     
 }
 
-extension UIView {
-    func dropShadow(scale: Bool = true) {
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.6
-        layer.shadowOffset = .zero
-        layer.shadowRadius = 10
-        layer.shouldRasterize = true
-        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
-    }
-}
+
 
