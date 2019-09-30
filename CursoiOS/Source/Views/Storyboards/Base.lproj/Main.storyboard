@@ -82,6 +82,7 @@
                                             <outlet property="mLabelEmail" destination="C4R-xM-WJe" id="tte-mL-BjG"/>
                                             <outlet property="mLabelName" destination="n9M-Wt-d5y" id="gv6-1s-dGp"/>
                                             <outlet property="mView" destination="mBN-ZY-1z4" id="zXx-gh-J7R"/>
+                                            <segue destination="2jd-O1-bzp" kind="show" id="gNz-5a-XYR"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -103,7 +104,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3041" y="-443"/>
+            <point key="canvasLocation" x="3367" y="-631"/>
+        </scene>
+        <!--DetailStudent-->
+        <scene sceneID="MD6-82-uiI">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Student" storyboardName="DetailStudent" id="2jd-O1-bzp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="F4J-lm-7Bb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7S-uF-9in" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4262" y="-631"/>
         </scene>
         <!--Teachers-->
         <scene sceneID="Izt-BQ-Xf2">
@@ -178,6 +189,7 @@
                                             <outlet property="mLabelEmail" destination="gmY-hm-qEk" id="Snh-Xa-zO1"/>
                                             <outlet property="mLabelName" destination="x7h-kL-GFb" id="VVg-24-RHo"/>
                                             <outlet property="mView" destination="cXe-LX-edk" id="riR-Xs-9mb"/>
+                                            <segue destination="9ft-9P-BrE" kind="show" id="sUb-If-LpG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -199,7 +211,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxT-bd-rYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3040.579710144928" y="300.66964285714283"/>
+            <point key="canvasLocation" x="3367" y="40"/>
+        </scene>
+        <!--DetailTeacher-->
+        <scene sceneID="3DX-9o-hAJ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Teacher" storyboardName="DetailTeacher" id="9ft-9P-BrE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Jq4-2c-SjP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qvj-ng-8T5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4262" y="40"/>
         </scene>
         <!--Subjects-->
         <scene sceneID="evl-Tq-5ff">
@@ -297,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgP-Nx-W7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3040.579710144928" y="1034.5982142857142"/>
+            <point key="canvasLocation" x="3367" y="702"/>
         </scene>
         <!--DetailSubjects-->
         <scene sceneID="k7L-rj-24A">
@@ -307,7 +329,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mL-KA-gKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3841" y="1035"/>
+            <point key="canvasLocation" x="4264" y="702"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="9u3-Cv-oB3">
