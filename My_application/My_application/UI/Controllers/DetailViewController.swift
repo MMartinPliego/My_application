@@ -6,19 +6,19 @@
 //  Copyright © 2019 Orum Games. All rights reserved.
 //
 
+
+
 import UIKit
 
-class  DetailViewController: UIViewController {
+class DetailViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var section1Label: UILabel!
     @IBOutlet weak var section2Label: UILabel!
-    @IBOutlet var dataCollectionView:
-        Array<UICollectionView>!
+    @IBOutlet var dataCollectionView: Array<UICollectionView>!
     @IBOutlet weak var deleteButton: UIButton!
-    
     
     var data: Subject?
     
@@ -27,15 +27,17 @@ class  DetailViewController: UIViewController {
         
         configure(image: data?.avatar)
         configure(title: data?.name)
-        configure(section1: "Teacher")
-        configure(section2: "Subject")
         configure(subtitle: "")
+        configure(section1: "Teachers")
+        configure(section2: "Students")
     }
     
     func configure(image: String?) {
         guard let imageData = image else {
+            imageView.image = nil
             return
         }
+        
         imageView.image = UIImage(named: imageData)
     }
     
@@ -55,27 +57,26 @@ class  DetailViewController: UIViewController {
         section2Label.text = section2
     }
     
-    func configureCollentionView() {
-        dataCollectionView.forEach{ dataCollectionView in
-            dataCollectionView.dataSource = self
-            dataCollectionView.delegate = self
+    func configureCollectionsView() {
+        dataCollectionView.forEach{ collectionView in
+            collectionView.dataSource = self
+            collectionView.delegate = self
         }
-        
     }
-    
 }
 
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         switch collectionView.tag {
-        case 0:
-            return data?.teachers.count ?? 0
-        case 1:
-            return data?.students.count ?? 0
-            
-        default:
-            return 0
+            case 0:
+                return data?.teachers.count ?? 0
+
+            case 1:
+                return data?.students.count ?? 0
+        
+            default:
+                return 0
         }
     }
     
