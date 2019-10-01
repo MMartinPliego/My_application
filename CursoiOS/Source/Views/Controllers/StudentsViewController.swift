@@ -23,6 +23,22 @@ class StudentsViewController: UIViewController {
     }
 }
 
+
+extension StudentsViewController {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? StudentDetailViewController,
+              let cell = sender as? UITableViewCell,
+              let indexPath = tableView.indexPath(for: cell) else {
+            return
+        }
+
+        destination.student = defaultStudents[indexPath.row]
+    }
+}
+
+
+
 extension StudentsViewController: UITableViewDataSource, UITableViewDelegate {
     
     /// Configure tableView with default options

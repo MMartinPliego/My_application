@@ -20,7 +20,8 @@ class TeacherDetailViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     
     var teacher: Teacher?
-    
+    private var mTeacherSubject: Array<Subject> = []
+    private var mTeacherStudent: Array<Student> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class TeacherDetailViewController: UIViewController {
         configure(section1: "Subject")
         configure(section2: "Students")
         
+        loadSubjectsAndStudent(for: teacher?.name)
         configureCollectionsView()
     }
     
@@ -65,49 +67,93 @@ class TeacherDetailViewController: UIViewController {
             collectionView.delegate = self
         }
     }
+    
+    func loadSubjectsAndStudent(for teacherName: String?) {
+        guard let name = teacherName else {
+            return
+        }
+        
+        mTeacherSubject = filter(for: defaultSubjects,
+                                 by: name)
+        
+        mTeacherStudent = Array(students(for: mTeacherSubject))
+    }
+
+    func filter (for data: [Subject], by teacherName: String) -> [Subject] {
+        let teacherSubjects = data.filter({ subject in
+            let subjectTeachers = filter(teacher: subject.teachers,
+                                           by: teacherName)
+            
+            return subjectTeachers.count > 0
+            
+        })
+        return teacherSubjects
+        
+    }
+    
+    func filter (teacher data: [Teacher], by studentName: String) -> [Teacher] {
+        let studentsTeacher = data.filter({ teacherStudent in
+            guard let subjectStudentName = teacherStudent.name else {
+                return false
+            }
+            return subjectStudentName == studentName
+        })
+        return studentsTeacher
+        
+    }
+    
+    func students (for data: [Subject]) -> Set<Student> {
+        var subjectTeacher: Set<Student> = Set<Student>()
+        data.forEach { subject in
+            subject.students.forEach{ subjectTeacher.insert($0)}
+        }
+         return subjectTeacher
+        
+    }
+    
 }
 
 extension TeacherDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        switch collectionView.tag {
-            case 0:
-                return subject?.teachers. ?? 0
+func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    switch collectionView.tag {
+        case 0:
+            return mTeacherStudent.count
 
-            case 1:
-                return subject?.students.count ?? 0
-        
-            default:
-                return 0
-        }
+        case 1:
+            return mTeacherSubject.count
+    
+        default:
+            return 0
     }
+}
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailViewCell.cellIdentifier,
-                                                            for: indexPath) as? DetailViewCell else {
-                                                                return UICollectionViewCell()
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailViewCell.cellIdentifier,
+                                                                for: indexPath) as? DetailViewCell else {
+                                                                    return UICollectionViewCell()
+            }
+            
+            switch collectionView.tag {
+                case 0:
+                    if indexPath.row < mTeacherSubject.count {
+                        let subject = mTeacherSubject[indexPath.row]
+                        cell.configureCell(image: subject.logo,
+                                           title: subject.name)
+                    }
+                
+                case 1:
+                    if indexPath.row < mTeacherStudent.count {
+                        let teacher = mTeacherStudent[indexPath.row]
+                        cell.configureCell(image: teacher.avatar,
+                                           title: teacher.name)
+                    }
+                
+                default:
+                    return UICollectionViewCell()
+            }
+            
+            return cell
         }
         
-        switch collectionView.tag {
-            case 0:
-                if let teachers = subject?.teachers, indexPath.row < teachers.count {
-                    let teacher = teachers[indexPath.row]
-                    cell.configureCell(image: teacher.avatar,
-                                       title: teacher.name)
-                }
-            
-            case 1:
-                if let students = subject?.students, indexPath.row < students.count {
-                    let student = students[indexPath.row]
-                    cell.configureCell(image: student.avatar,
-                                       title: student.name)
-                }
-            
-            default:
-                return UICollectionViewCell()
-        }
-        
-        return cell
     }
-    
-}

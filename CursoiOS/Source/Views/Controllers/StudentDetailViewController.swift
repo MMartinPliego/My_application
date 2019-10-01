@@ -19,18 +19,21 @@ class StudentDetailViewController: UIViewController {
     @IBOutlet var dataCollectionView: Array<UICollectionView>!
     @IBOutlet weak var deleteButton: UIButton!
     
-    var subject: Subject?
-    
+    var student: Student?
+    private var mStudentSubject: Array<Subject> = []
+    private var mStudentTeacher: Array<Teacher> = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configure(image: subject?.logo)
-        configure(title: subject?.name)
+        configure(image: student?.avatar)
+        configure(title: student?.name)
         configure(subtitle: "")
-        configure(section1: "Teachers")
-        configure(section2: "Students")
+        configure(section1: "Subjects")
+        configure(section2: "Teachers")
         
+        loadSubjectsAndTeacher(for: student?.name)
         configureCollectionsView()
     }
     
@@ -65,6 +68,50 @@ class StudentDetailViewController: UIViewController {
             collectionView.delegate = self
         }
     }
+
+    func loadSubjectsAndTeacher(for studentName: String?) {
+        guard let name = studentName else {
+            return
+        }
+        
+        mStudentSubject = filter(subjects: defaultSubjects,
+                                     by: name)
+        
+        mStudentTeacher = Array(teachers(for: mStudentSubject))
+    }
+
+    func filter (subjects data: [Subject], by studentName: String) -> [Subject] {
+        let studentSubjects = data.filter({ subject in
+            let subjectStudents = filter(students: subject.students,
+                                           by: studentName)
+            
+            return subjectStudents.count > 0
+            
+        })
+        return studentSubjects
+        
+    }
+
+    func filter (students data: [Student], by studentName: String) -> [Student] {
+        let studentsForName = data.filter({ subjectStudent in
+            guard let subjectStudentName = subjectStudent.name else {
+                return false
+            }
+            return subjectStudentName == studentName
+        })
+        return studentsForName
+        
+    }
+
+    func teachers (for data: [Subject]) -> Set<Teacher> {
+        var subjectTeachers: Set<Teacher> = Set<Teacher>()
+        data.forEach { subject in
+            subject.teachers.forEach{ subjectTeachers.insert($0)}
+        }
+         return subjectTeachers
+        
+    }
+    
 }
 
 extension StudentDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -72,10 +119,10 @@ extension StudentDetailViewController: UICollectionViewDelegate, UICollectionVie
         
         switch collectionView.tag {
             case 0:
-                return subject?.teachers.count ?? 0
+                return mStudentSubject.count
 
             case 1:
-                return subject?.students.count ?? 0
+                return mStudentTeacher.count
         
             default:
                 return 0
@@ -90,17 +137,17 @@ extension StudentDetailViewController: UICollectionViewDelegate, UICollectionVie
         
         switch collectionView.tag {
             case 0:
-                if let teachers = subject?.teachers, indexPath.row < teachers.count {
-                    let teacher = teachers[indexPath.row]
-                    cell.configureCell(image: teacher.avatar,
-                                       title: teacher.name)
+                if indexPath.row < mStudentSubject.count {
+                    let subject = mStudentSubject[indexPath.row]
+                    cell.configureCell(image: subject.logo,
+                                       title: subject.name)
                 }
             
             case 1:
-                if let students = subject?.students, indexPath.row < students.count {
-                    let student = students[indexPath.row]
-                    cell.configureCell(image: student.avatar,
-                                       title: student.name)
+                if indexPath.row < mStudentTeacher.count {
+                    let teacher = mStudentTeacher[indexPath.row]
+                    cell.configureCell(image: teacher.avatar,
+                                       title: teacher.name)
                 }
             
             default:
@@ -111,4 +158,3 @@ extension StudentDetailViewController: UICollectionViewDelegate, UICollectionVie
     }
     
 }
-
