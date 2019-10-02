@@ -12,12 +12,12 @@ import Foundation
 
 // With Calendar and DateComponents class can create a new Date
 // Calendar.current return actual Calendar 'Gregorian'
-let defaultStudents = [Student(name: "Óliver",
+var defaultStudents = [Student(name: "Paula",
                                email: "oliver@gmail.com",
                                birthdate: Calendar.current.date(from: DateComponents(year: 2019,
                                                                                      month: 5)),
                                avatar:"img_student_1"),
-                       Student(name: "Sara",
+                       Student(name: "Oliver",
                                email: "sara@gmail.com",
                                birthdate: Calendar.current.date(from: DateComponents(year: 1984,
                                                                                      month: 9)),
@@ -37,7 +37,7 @@ let defaultStudents = [Student(name: "Óliver",
                                birthdate: Calendar.current.date(from: DateComponents(year: 1956,
                                                                                      month: 4)),
                                avatar:"img_student_5"),
-                       Student(name: "Eduardo",
+                       Student(name: "Gema",
                                email: "eduardo@gmail.com",
                                birthdate: Calendar.current.date(from: DateComponents(year: 1956,
                                                                                      month: 12)),
@@ -50,11 +50,11 @@ let defaultStudents = [Student(name: "Óliver",
 // MARK: -  Create list of Teachers
 
 // With .extern or .intern we represent the Enum value for this properties.
-let defaultTeachers = [Teacher(name: "Juan",
+var defaultTeachers = [Teacher(name: "Lucía",
                                email: "juan@gmail.com",
                                type: .intern,
                                avatar:"img_teacher_1"),
-                       Teacher(name: "Lucía",
+                       Teacher(name: "Juan",
                                email: "lucia@gmail.com",
                                type: .extern,
                                avatar:"img_teacher_3"),
@@ -66,14 +66,14 @@ let defaultTeachers = [Teacher(name: "Juan",
                                email: "javier@gmail.com",
                                type: .intern,
                                avatar:"img_teacher_5"),
-                       Teacher(name: "Marta",
+                       Teacher(name: "José",
                                email: "marta@gmail.com",
                                type: .intern,
                                avatar:"img_teacher_4")]
 
 // MARK: - Create list of Subjects
 // Use a list.filter for get different values for each subject
-let defaultSubjects = [Subject(name: "Android",
+var defaultSubjects = [Subject(name: "Android",
                                teachers: defaultTeachers.filter{$0.name?.contains("u") ?? false},
                                students: defaultStudents.filter{$0.name?.contains("a") ?? false},
                                logo:"img_subject_android"),

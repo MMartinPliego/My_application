@@ -242,6 +242,9 @@
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" red="0.97115951779999998" green="0.0" blue="0.3017677963" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="onDeletePressed:" destination="a6C-lR-J00" eventType="touchUpInside" id="j4W-SY-WoD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -18,6 +18,32 @@ class SubjectDetailViewController: UIViewController {
     @IBOutlet var dataCollectionView: Array<UICollectionView>!
     @IBOutlet weak var deleteButton: UIButton!
     
+    @IBAction func onDeletePressed(_ sender: UIButton) {
+    
+        // Para eliminar sobre lo que pulsemos en la pantalla
+        let alert = UIAlertController(title: "Eliminar asignatura",
+                                      message: "Vas a eliminar la asignatura, ¿Estás seguro?",
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Eliminar",
+                                      style: .destructive,
+                                      handler: {[weak self] _ in
+        
+        defaultSubjects.removeAll(where: { $0.name == self?.subject?.name ?? ""})
+
+            // Para liberar el espacio de memoria del Clousure se pone [weak self] no dejar nada en memoria
+            self?.navigationController?.popViewController(animated: true)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancelar",
+                                      style: .cancel))
+
+        
+        present(alert, animated: true)
+        
+    }
+    
+    
     var subject: Subject?
     
     

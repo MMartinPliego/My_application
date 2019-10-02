@@ -19,7 +19,34 @@ class TeacherDetailViewController: UIViewController {
     @IBOutlet var dataCollectionView: Array<UICollectionView>!
     @IBOutlet weak var deleteButton: UIButton!
     
+    @IBAction func onDeletePressed(_ sender: UIButton) {
+        
+          // Para eliminar sobre lo que pulsemos en la pantalla
+             let alert = UIAlertController(title: "Eliminar profesor",
+                                           message: "Vas a eliminar el profesor, ¿Estás seguro?",
+                                           preferredStyle: .alert)
+             
+             alert.addAction(UIAlertAction(title: "Eliminar",
+                                           style: .destructive,
+                                           handler: {[weak self] _ in
+             
+             defaultTeachers.removeAll(where: { $0.name == self?.teacher?.name ?? ""})
+
+                 // Para liberar el espacio de memoria del Clousure se pone [weak self] no dejar nada en memoria
+                 self?.navigationController?.popViewController(animated: true)
+             }))
+             
+             alert.addAction(UIAlertAction(title: "Cancelar",
+                                           style: .cancel))
+
+             
+             present(alert, animated: true)
+             
+         }
+    
+    
     var teacher: Teacher?
+    
     private var mTeacherSubject: Array<Subject> = []
     private var mTeacherStudent: Array<Student> = []
     

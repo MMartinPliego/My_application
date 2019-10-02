@@ -20,6 +20,13 @@ class SubjectsViewController: UIViewController {
         
         configureView()
     }
+    // Eliminar la asignatura al pulsar sobre el botón
+    override func viewWillAppear(_ animated: Bool) {
+        super .viewWillAppear(animated)
+        
+        collectionView.reloadData()
+    }
+    
 }
 
 

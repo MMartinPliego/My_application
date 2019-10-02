@@ -9,9 +9,9 @@
 import UIKit
 
 extension UIView {
-    func configureShadows(color: UIColor = UIColor.lightGray,
+    func configureShadows(color: UIColor = UIColor.black,
                           opacity: Float = 0.6,
-                          radius: CGFloat = 4.0,
+                          radius: CGFloat = 8.0,
                           offset: CGSize = CGSize.zero) {
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOffset = offset
