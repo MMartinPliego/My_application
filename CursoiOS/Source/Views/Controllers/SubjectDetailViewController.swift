@@ -2,7 +2,7 @@
 //  SubjectDetailViewController.swift
 //  CursoiOS
 //
-//  Created by David Jardon on 27/09/2019.
+//  Created by Manuel Martín on 27/09/2019.
 //  Copyright © 2019 ds. All rights reserved.
 //
 

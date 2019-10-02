@@ -1,22 +1,24 @@
 //
-//  StudentViewCell.swift
+//  PersonViewCell.swift
 //  CursoiOS
 //
-//  Created by Dev1 on 25/09/2019.
+//  Created by Manuel Martín on 25/09/2019.
 //  Copyright © 2019 ds. All rights reserved.
 //
 
 import UIKit
 
 
-class StudentViewCell: UITableViewCell {
+class PersonViewCell: UITableViewCell {
+     static let cellIdentifier = String(describing: PersonViewCell.self)
     
+        // MARK: - Outlets -
     @IBOutlet weak var mView: UIView!
     @IBOutlet weak var mImage: UIImageView!
     @IBOutlet weak var mLabelName: UILabel!
     @IBOutlet weak var mLabelEmail: UILabel!
     
-    
+        // MARK: - Lifecycle -
     override func prepareForReuse() {
         mImage.image = nil
         mLabelName.text = nil
@@ -26,13 +28,14 @@ class StudentViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        mView.layer.cornerRadius = 8.0
+        mView.layer.cornerRadius = 6.0
         mView.configureShadows()
     }
     
-    func configureCell(student: Student) {
-        mImage.image = UIImage(named: student.avatar ?? "")
-        mLabelName.text = student.name
-        mLabelEmail.text = student.email
+        // MARK: - Configure methods -
+    func configureCell(image: String? = nil, name: String? = nil, email: String? = nil) {
+        mImage.image = UIImage(named: image ?? "")
+        mLabelName.text = name
+        mLabelEmail.text = email
     }
 }

@@ -2,7 +2,7 @@
 //  StudentDetailViewController.swift
 //  CursoiOS
 //
-//  Created by Dev2 on 30/09/2019.
+//  Created by Manuel Martín on 30/09/2019.
 //  Copyright © 2019 ds. All rights reserved.
 //
 

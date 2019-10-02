@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StudentViewCell" rowHeight="120" id="HXC-0b-N6P" customClass="StudentViewCell" customModule="CursoiOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonViewCell" rowHeight="120" id="HXC-0b-N6P" customClass="PersonViewCell" customModule="CursoiOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HXC-0b-N6P" id="EpU-nA-tKT">
@@ -97,7 +97,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MKe-Oo-Fr5"/>
+                    <navigationItem key="navigationItem" id="MKe-Oo-Fr5">
+                        <barButtonItem key="backBarButtonItem" title=" " id="2WV-9c-K8S"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="GDl-kF-DPW" id="6FR-Wt-2Xm"/>
                     </connections>
@@ -128,7 +130,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TeacherViewCell" rowHeight="171" id="ByE-i7-jBk" customClass="TeacherViewCell" customModule="CursoiOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonViewCell" rowHeight="171" id="ByE-i7-jBk" customClass="PersonViewCell" customModule="CursoiOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ByE-i7-jBk" id="n5V-y6-Rv7">
@@ -204,7 +206,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aar-yo-0Sl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bLC-iZ-JgL"/>
+                    <navigationItem key="navigationItem" id="bLC-iZ-JgL">
+                        <barButtonItem key="backBarButtonItem" title=" " id="aqg-g3-Zfc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qlU-zW-0GY" id="VAR-53-r1A"/>
                     </connections>
@@ -312,7 +316,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C73-Fj-DuA"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Dlp-0r-9fe"/>
+                    <navigationItem key="navigationItem" id="Dlp-0r-9fe">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fPq-Aw-Wk3"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="F5n-18-aQI" id="aHH-3i-DzN"/>
                     </connections>

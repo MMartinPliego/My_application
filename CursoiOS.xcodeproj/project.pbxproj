@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0F1139ED233D1696006CB4CD /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1139EC233D1696006CB4CD /* TeachersViewController.swift */; };
-		0F1139EF233D16F0006CB4CD /* TeacherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1139EE233D16F0006CB4CD /* TeacherViewCell.swift */; };
 		0F1139F5233D3B75006CB4CD /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1139F4233D3B75006CB4CD /* DetailViewCell.swift */; };
 		0F1139F7233D3BDE006CB4CD /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1139F6233D3BDE006CB4CD /* SubjectsViewController.swift */; };
 		0F504E362333FF79007EAFC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F504E352333FF79007EAFC0 /* AppDelegate.swift */; };
@@ -24,7 +23,7 @@
 		0FE27A2C2335470700F078BF /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE27A2B2335470700F078BF /* Teacher.swift */; };
 		0FE27A2E2335472B00F078BF /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE27A2D2335472B00F078BF /* Subject.swift */; };
 		5ADFE5AF233BB11900D6801F /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFE5AE233BB11900D6801F /* StudentsViewController.swift */; };
-		5ADFE5B1233BD78B00D6801F /* StudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFE5B0233BD78B00D6801F /* StudentViewCell.swift */; };
+		5ADFE5B1233BD78B00D6801F /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFE5B0233BD78B00D6801F /* PersonViewCell.swift */; };
 		D977A8E223427FE400098207 /* DetailTeacher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D977A8E123427FE400098207 /* DetailTeacher.storyboard */; };
 		D977A8E42342801800098207 /* DetailStudent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D977A8E32342801800098207 /* DetailStudent.storyboard */; };
 		D977A8EA2342820C00098207 /* TeacherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977A8E92342820C00098207 /* TeacherDetailViewController.swift */; };
@@ -33,7 +32,6 @@
 
 /* Begin PBXFileReference section */
 		0F1139EC233D1696006CB4CD /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
-		0F1139EE233D16F0006CB4CD /* TeacherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewCell.swift; sourceTree = "<group>"; };
 		0F1139F4233D3B75006CB4CD /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		0F1139F6233D3BDE006CB4CD /* SubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
 		0F504E322333FF79007EAFC0 /* CursoiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursoiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +49,7 @@
 		0FE27A2B2335470700F078BF /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		0FE27A2D2335472B00F078BF /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		5ADFE5AE233BB11900D6801F /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
-		5ADFE5B0233BD78B00D6801F /* StudentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewCell.swift; sourceTree = "<group>"; };
+		5ADFE5B0233BD78B00D6801F /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
 		D977A8E123427FE400098207 /* DetailTeacher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTeacher.storyboard; sourceTree = "<group>"; };
 		D977A8E32342801800098207 /* DetailStudent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailStudent.storyboard; sourceTree = "<group>"; };
 		D977A8E92342820C00098207 /* TeacherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDetailViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +139,7 @@
 		0FE27A2123352BED00F078BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D91C6D622344F9CD00C1A481 /* Cells */,
 				0FE27A2223352BF400F078BF /* Controllers */,
 				0FE27A2323352C5B00F078BF /* Storyboards */,
 			);
@@ -152,10 +151,7 @@
 			children = (
 				0F504E372333FF79007EAFC0 /* MainViewController.swift */,
 				5ADFE5AE233BB11900D6801F /* StudentsViewController.swift */,
-				5ADFE5B0233BD78B00D6801F /* StudentViewCell.swift */,
 				0F1139EC233D1696006CB4CD /* TeachersViewController.swift */,
-				0F1139EE233D16F0006CB4CD /* TeacherViewCell.swift */,
-				0F1139F4233D3B75006CB4CD /* DetailViewCell.swift */,
 				0F1139F6233D3BDE006CB4CD /* SubjectsViewController.swift */,
 				0F586CAD233E844C00EB803E /* SubjectDetailViewController.swift */,
 				D977A8E92342820C00098207 /* TeacherDetailViewController.swift */,
@@ -193,6 +189,15 @@
 				0FE27A2D2335472B00F078BF /* Subject.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D91C6D622344F9CD00C1A481 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5ADFE5B0233BD78B00D6801F /* PersonViewCell.swift */,
+				0F1139F4233D3B75006CB4CD /* DetailViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FE27A2C2335470700F078BF /* Teacher.swift in Sources */,
-				0F1139EF233D16F0006CB4CD /* TeacherViewCell.swift in Sources */,
 				0FE27A2E2335472B00F078BF /* Subject.swift in Sources */,
-				5ADFE5B1233BD78B00D6801F /* StudentViewCell.swift in Sources */,
+				5ADFE5B1233BD78B00D6801F /* PersonViewCell.swift in Sources */,
 				0F504E382333FF79007EAFC0 /* MainViewController.swift in Sources */,
 				0F1139F7233D3BDE006CB4CD /* SubjectsViewController.swift in Sources */,
 				0F1139F5233D3B75006CB4CD /* DetailViewCell.swift in Sources */,
